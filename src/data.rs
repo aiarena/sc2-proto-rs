@@ -1085,6 +1085,31 @@ impl Weapon {
         self.damage = ::std::option::Option::Some(v);
     }
 
+    // repeated .SC2APIProtocol.DamageBonus damage_bonus = 3;
+
+    pub fn damage_bonus(&self) -> &[DamageBonus] {
+        &self.damage_bonus
+    }
+
+    pub fn clear_damage_bonus(&mut self) {
+        self.damage_bonus.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_damage_bonus(&mut self, v: ::std::vec::Vec<DamageBonus>) {
+        self.damage_bonus = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_damage_bonus(&mut self) -> &mut ::std::vec::Vec<DamageBonus> {
+        &mut self.damage_bonus
+    }
+
+    // Take field
+    pub fn take_damage_bonus(&mut self) -> ::std::vec::Vec<DamageBonus> {
+        ::std::mem::replace(&mut self.damage_bonus, ::std::vec::Vec::new())
+    }
+
     // optional uint32 attacks = 4;
 
     pub fn attacks(&self) -> u32 {
@@ -1739,6 +1764,31 @@ impl UnitTypeData {
         self.sight_range = ::std::option::Option::Some(v);
     }
 
+    // repeated uint32 tech_alias = 21;
+
+    pub fn tech_alias(&self) -> &[u32] {
+        &self.tech_alias
+    }
+
+    pub fn clear_tech_alias(&mut self) {
+        self.tech_alias.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_tech_alias(&mut self, v: ::std::vec::Vec<u32>) {
+        self.tech_alias = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_tech_alias(&mut self) -> &mut ::std::vec::Vec<u32> {
+        &mut self.tech_alias
+    }
+
+    // Take field
+    pub fn take_tech_alias(&mut self) -> ::std::vec::Vec<u32> {
+        ::std::mem::replace(&mut self.tech_alias, ::std::vec::Vec::new())
+    }
+
     // optional uint32 unit_alias = 22;
 
     pub fn unit_alias(&self) -> u32 {
@@ -1796,6 +1846,31 @@ impl UnitTypeData {
         self.require_attached = ::std::option::Option::Some(v);
     }
 
+    // repeated .SC2APIProtocol.Attribute attributes = 8;
+
+    pub fn attributes(&self) -> &[::protobuf::EnumOrUnknown<Attribute>] {
+        &self.attributes
+    }
+
+    pub fn clear_attributes(&mut self) {
+        self.attributes.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_attributes(&mut self, v: ::std::vec::Vec<::protobuf::EnumOrUnknown<Attribute>>) {
+        self.attributes = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_attributes(&mut self) -> &mut ::std::vec::Vec<::protobuf::EnumOrUnknown<Attribute>> {
+        &mut self.attributes
+    }
+
+    // Take field
+    pub fn take_attributes(&mut self) -> ::std::vec::Vec<::protobuf::EnumOrUnknown<Attribute>> {
+        ::std::mem::replace(&mut self.attributes, ::std::vec::Vec::new())
+    }
+
     // optional float movement_speed = 9;
 
     pub fn movement_speed(&self) -> f32 {
@@ -1832,6 +1907,31 @@ impl UnitTypeData {
     // Param is passed by value, moved
     pub fn set_armor(&mut self, v: f32) {
         self.armor = ::std::option::Option::Some(v);
+    }
+
+    // repeated .SC2APIProtocol.Weapon weapons = 11;
+
+    pub fn weapons(&self) -> &[Weapon] {
+        &self.weapons
+    }
+
+    pub fn clear_weapons(&mut self) {
+        self.weapons.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_weapons(&mut self, v: ::std::vec::Vec<Weapon>) {
+        self.weapons = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_weapons(&mut self) -> &mut ::std::vec::Vec<Weapon> {
+        &mut self.weapons
+    }
+
+    // Take field
+    pub fn take_weapons(&mut self) -> ::std::vec::Vec<Weapon> {
+        ::std::mem::replace(&mut self.weapons, ::std::vec::Vec::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {

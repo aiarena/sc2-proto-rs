@@ -53,6 +53,81 @@ impl RequestQuery {
         ::std::default::Default::default()
     }
 
+    // repeated .SC2APIProtocol.RequestQueryPathing pathing = 1;
+
+    pub fn pathing(&self) -> &[RequestQueryPathing] {
+        &self.pathing
+    }
+
+    pub fn clear_pathing(&mut self) {
+        self.pathing.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_pathing(&mut self, v: ::std::vec::Vec<RequestQueryPathing>) {
+        self.pathing = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_pathing(&mut self) -> &mut ::std::vec::Vec<RequestQueryPathing> {
+        &mut self.pathing
+    }
+
+    // Take field
+    pub fn take_pathing(&mut self) -> ::std::vec::Vec<RequestQueryPathing> {
+        ::std::mem::replace(&mut self.pathing, ::std::vec::Vec::new())
+    }
+
+    // repeated .SC2APIProtocol.RequestQueryAvailableAbilities abilities = 2;
+
+    pub fn abilities(&self) -> &[RequestQueryAvailableAbilities] {
+        &self.abilities
+    }
+
+    pub fn clear_abilities(&mut self) {
+        self.abilities.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_abilities(&mut self, v: ::std::vec::Vec<RequestQueryAvailableAbilities>) {
+        self.abilities = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_abilities(&mut self) -> &mut ::std::vec::Vec<RequestQueryAvailableAbilities> {
+        &mut self.abilities
+    }
+
+    // Take field
+    pub fn take_abilities(&mut self) -> ::std::vec::Vec<RequestQueryAvailableAbilities> {
+        ::std::mem::replace(&mut self.abilities, ::std::vec::Vec::new())
+    }
+
+    // repeated .SC2APIProtocol.RequestQueryBuildingPlacement placements = 3;
+
+    pub fn placements(&self) -> &[RequestQueryBuildingPlacement] {
+        &self.placements
+    }
+
+    pub fn clear_placements(&mut self) {
+        self.placements.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_placements(&mut self, v: ::std::vec::Vec<RequestQueryBuildingPlacement>) {
+        self.placements = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_placements(&mut self) -> &mut ::std::vec::Vec<RequestQueryBuildingPlacement> {
+        &mut self.placements
+    }
+
+    // Take field
+    pub fn take_placements(&mut self) -> ::std::vec::Vec<RequestQueryBuildingPlacement> {
+        ::std::mem::replace(&mut self.placements, ::std::vec::Vec::new())
+    }
+
     // optional bool ignore_resource_requirements = 4;
 
     pub fn ignore_resource_requirements(&self) -> bool {
@@ -247,6 +322,81 @@ impl<'a> ::std::default::Default for &'a ResponseQuery {
 impl ResponseQuery {
     pub fn new() -> ResponseQuery {
         ::std::default::Default::default()
+    }
+
+    // repeated .SC2APIProtocol.ResponseQueryPathing pathing = 1;
+
+    pub fn pathing(&self) -> &[ResponseQueryPathing] {
+        &self.pathing
+    }
+
+    pub fn clear_pathing(&mut self) {
+        self.pathing.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_pathing(&mut self, v: ::std::vec::Vec<ResponseQueryPathing>) {
+        self.pathing = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_pathing(&mut self) -> &mut ::std::vec::Vec<ResponseQueryPathing> {
+        &mut self.pathing
+    }
+
+    // Take field
+    pub fn take_pathing(&mut self) -> ::std::vec::Vec<ResponseQueryPathing> {
+        ::std::mem::replace(&mut self.pathing, ::std::vec::Vec::new())
+    }
+
+    // repeated .SC2APIProtocol.ResponseQueryAvailableAbilities abilities = 2;
+
+    pub fn abilities(&self) -> &[ResponseQueryAvailableAbilities] {
+        &self.abilities
+    }
+
+    pub fn clear_abilities(&mut self) {
+        self.abilities.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_abilities(&mut self, v: ::std::vec::Vec<ResponseQueryAvailableAbilities>) {
+        self.abilities = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_abilities(&mut self) -> &mut ::std::vec::Vec<ResponseQueryAvailableAbilities> {
+        &mut self.abilities
+    }
+
+    // Take field
+    pub fn take_abilities(&mut self) -> ::std::vec::Vec<ResponseQueryAvailableAbilities> {
+        ::std::mem::replace(&mut self.abilities, ::std::vec::Vec::new())
+    }
+
+    // repeated .SC2APIProtocol.ResponseQueryBuildingPlacement placements = 3;
+
+    pub fn placements(&self) -> &[ResponseQueryBuildingPlacement] {
+        &self.placements
+    }
+
+    pub fn clear_placements(&mut self) {
+        self.placements.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_placements(&mut self, v: ::std::vec::Vec<ResponseQueryBuildingPlacement>) {
+        self.placements = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_placements(&mut self) -> &mut ::std::vec::Vec<ResponseQueryBuildingPlacement> {
+        &mut self.placements
+    }
+
+    // Take field
+    pub fn take_placements(&mut self) -> ::std::vec::Vec<ResponseQueryBuildingPlacement> {
+        ::std::mem::replace(&mut self.placements, ::std::vec::Vec::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
@@ -480,6 +630,36 @@ impl RequestQueryPathing {
     // Param is passed by value, moved
     pub fn set_unit_tag(&mut self, v: u64) {
         self.start = ::std::option::Option::Some(request_query_pathing::Start::UnitTag(v))
+    }
+
+    // optional .SC2APIProtocol.Point2D end_pos = 3;
+
+    pub fn end_pos(&self) -> &super::common::Point2D {
+        self.end_pos.as_ref().unwrap_or_else(|| <super::common::Point2D as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_end_pos(&mut self) {
+        self.end_pos.clear();
+    }
+
+    pub fn has_end_pos(&self) -> bool {
+        self.end_pos.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_end_pos(&mut self, v: super::common::Point2D) {
+        self.end_pos = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_end_pos(&mut self) -> &mut super::common::Point2D {
+        self.end_pos.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_end_pos(&mut self) -> super::common::Point2D {
+        self.end_pos.take().unwrap_or_else(|| super::common::Point2D::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
@@ -965,6 +1145,31 @@ impl ResponseQueryAvailableAbilities {
         ::std::default::Default::default()
     }
 
+    // repeated .SC2APIProtocol.AvailableAbility abilities = 1;
+
+    pub fn abilities(&self) -> &[super::common::AvailableAbility] {
+        &self.abilities
+    }
+
+    pub fn clear_abilities(&mut self) {
+        self.abilities.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_abilities(&mut self, v: ::std::vec::Vec<super::common::AvailableAbility>) {
+        self.abilities = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_abilities(&mut self) -> &mut ::std::vec::Vec<super::common::AvailableAbility> {
+        &mut self.abilities
+    }
+
+    // Take field
+    pub fn take_abilities(&mut self) -> ::std::vec::Vec<super::common::AvailableAbility> {
+        ::std::mem::replace(&mut self.abilities, ::std::vec::Vec::new())
+    }
+
     // optional uint64 unit_tag = 2;
 
     pub fn unit_tag(&self) -> u64 {
@@ -1179,6 +1384,36 @@ impl RequestQueryBuildingPlacement {
     // Param is passed by value, moved
     pub fn set_ability_id(&mut self, v: i32) {
         self.ability_id = ::std::option::Option::Some(v);
+    }
+
+    // optional .SC2APIProtocol.Point2D target_pos = 2;
+
+    pub fn target_pos(&self) -> &super::common::Point2D {
+        self.target_pos.as_ref().unwrap_or_else(|| <super::common::Point2D as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_target_pos(&mut self) {
+        self.target_pos.clear();
+    }
+
+    pub fn has_target_pos(&self) -> bool {
+        self.target_pos.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_target_pos(&mut self, v: super::common::Point2D) {
+        self.target_pos = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_target_pos(&mut self) -> &mut super::common::Point2D {
+        self.target_pos.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_target_pos(&mut self) -> super::common::Point2D {
+        self.target_pos.take().unwrap_or_else(|| super::common::Point2D::new())
     }
 
     // optional uint64 placing_unit_tag = 3;

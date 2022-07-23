@@ -49,6 +49,66 @@ impl ObservationFeatureLayer {
         ::std::default::Default::default()
     }
 
+    // optional .SC2APIProtocol.FeatureLayers renders = 1;
+
+    pub fn renders(&self) -> &FeatureLayers {
+        self.renders.as_ref().unwrap_or_else(|| <FeatureLayers as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_renders(&mut self) {
+        self.renders.clear();
+    }
+
+    pub fn has_renders(&self) -> bool {
+        self.renders.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_renders(&mut self, v: FeatureLayers) {
+        self.renders = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_renders(&mut self) -> &mut FeatureLayers {
+        self.renders.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_renders(&mut self) -> FeatureLayers {
+        self.renders.take().unwrap_or_else(|| FeatureLayers::new())
+    }
+
+    // optional .SC2APIProtocol.FeatureLayersMinimap minimap_renders = 2;
+
+    pub fn minimap_renders(&self) -> &FeatureLayersMinimap {
+        self.minimap_renders.as_ref().unwrap_or_else(|| <FeatureLayersMinimap as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_minimap_renders(&mut self) {
+        self.minimap_renders.clear();
+    }
+
+    pub fn has_minimap_renders(&self) -> bool {
+        self.minimap_renders.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_minimap_renders(&mut self, v: FeatureLayersMinimap) {
+        self.minimap_renders = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_minimap_renders(&mut self) -> &mut FeatureLayersMinimap {
+        self.minimap_renders.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_minimap_renders(&mut self) -> FeatureLayersMinimap {
+        self.minimap_renders.take().unwrap_or_else(|| FeatureLayersMinimap::new())
+    }
+
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
         let mut fields = ::std::vec::Vec::with_capacity(2);
         let mut oneofs = ::std::vec::Vec::with_capacity(0);
@@ -239,6 +299,816 @@ impl<'a> ::std::default::Default for &'a FeatureLayers {
 impl FeatureLayers {
     pub fn new() -> FeatureLayers {
         ::std::default::Default::default()
+    }
+
+    // optional .SC2APIProtocol.ImageData height_map = 1;
+
+    pub fn height_map(&self) -> &super::common::ImageData {
+        self.height_map.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_height_map(&mut self) {
+        self.height_map.clear();
+    }
+
+    pub fn has_height_map(&self) -> bool {
+        self.height_map.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_height_map(&mut self, v: super::common::ImageData) {
+        self.height_map = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_height_map(&mut self) -> &mut super::common::ImageData {
+        self.height_map.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_height_map(&mut self) -> super::common::ImageData {
+        self.height_map.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData visibility_map = 2;
+
+    pub fn visibility_map(&self) -> &super::common::ImageData {
+        self.visibility_map.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_visibility_map(&mut self) {
+        self.visibility_map.clear();
+    }
+
+    pub fn has_visibility_map(&self) -> bool {
+        self.visibility_map.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_visibility_map(&mut self, v: super::common::ImageData) {
+        self.visibility_map = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_visibility_map(&mut self) -> &mut super::common::ImageData {
+        self.visibility_map.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_visibility_map(&mut self) -> super::common::ImageData {
+        self.visibility_map.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData creep = 3;
+
+    pub fn creep(&self) -> &super::common::ImageData {
+        self.creep.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_creep(&mut self) {
+        self.creep.clear();
+    }
+
+    pub fn has_creep(&self) -> bool {
+        self.creep.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_creep(&mut self, v: super::common::ImageData) {
+        self.creep = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_creep(&mut self) -> &mut super::common::ImageData {
+        self.creep.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_creep(&mut self) -> super::common::ImageData {
+        self.creep.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData power = 4;
+
+    pub fn power(&self) -> &super::common::ImageData {
+        self.power.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_power(&mut self) {
+        self.power.clear();
+    }
+
+    pub fn has_power(&self) -> bool {
+        self.power.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_power(&mut self, v: super::common::ImageData) {
+        self.power = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_power(&mut self) -> &mut super::common::ImageData {
+        self.power.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_power(&mut self) -> super::common::ImageData {
+        self.power.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData player_id = 5;
+
+    pub fn player_id(&self) -> &super::common::ImageData {
+        self.player_id.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_player_id(&mut self) {
+        self.player_id.clear();
+    }
+
+    pub fn has_player_id(&self) -> bool {
+        self.player_id.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_player_id(&mut self, v: super::common::ImageData) {
+        self.player_id = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_player_id(&mut self) -> &mut super::common::ImageData {
+        self.player_id.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_player_id(&mut self) -> super::common::ImageData {
+        self.player_id.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData unit_type = 6;
+
+    pub fn unit_type(&self) -> &super::common::ImageData {
+        self.unit_type.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit_type(&mut self) {
+        self.unit_type.clear();
+    }
+
+    pub fn has_unit_type(&self) -> bool {
+        self.unit_type.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_type(&mut self, v: super::common::ImageData) {
+        self.unit_type = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit_type(&mut self) -> &mut super::common::ImageData {
+        self.unit_type.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit_type(&mut self) -> super::common::ImageData {
+        self.unit_type.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData selected = 7;
+
+    pub fn selected(&self) -> &super::common::ImageData {
+        self.selected.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_selected(&mut self) {
+        self.selected.clear();
+    }
+
+    pub fn has_selected(&self) -> bool {
+        self.selected.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_selected(&mut self, v: super::common::ImageData) {
+        self.selected = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_selected(&mut self) -> &mut super::common::ImageData {
+        self.selected.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_selected(&mut self) -> super::common::ImageData {
+        self.selected.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData unit_hit_points = 8;
+
+    pub fn unit_hit_points(&self) -> &super::common::ImageData {
+        self.unit_hit_points.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit_hit_points(&mut self) {
+        self.unit_hit_points.clear();
+    }
+
+    pub fn has_unit_hit_points(&self) -> bool {
+        self.unit_hit_points.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_hit_points(&mut self, v: super::common::ImageData) {
+        self.unit_hit_points = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit_hit_points(&mut self) -> &mut super::common::ImageData {
+        self.unit_hit_points.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit_hit_points(&mut self) -> super::common::ImageData {
+        self.unit_hit_points.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData unit_hit_points_ratio = 17;
+
+    pub fn unit_hit_points_ratio(&self) -> &super::common::ImageData {
+        self.unit_hit_points_ratio.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit_hit_points_ratio(&mut self) {
+        self.unit_hit_points_ratio.clear();
+    }
+
+    pub fn has_unit_hit_points_ratio(&self) -> bool {
+        self.unit_hit_points_ratio.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_hit_points_ratio(&mut self, v: super::common::ImageData) {
+        self.unit_hit_points_ratio = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit_hit_points_ratio(&mut self) -> &mut super::common::ImageData {
+        self.unit_hit_points_ratio.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit_hit_points_ratio(&mut self) -> super::common::ImageData {
+        self.unit_hit_points_ratio.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData unit_energy = 9;
+
+    pub fn unit_energy(&self) -> &super::common::ImageData {
+        self.unit_energy.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit_energy(&mut self) {
+        self.unit_energy.clear();
+    }
+
+    pub fn has_unit_energy(&self) -> bool {
+        self.unit_energy.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_energy(&mut self, v: super::common::ImageData) {
+        self.unit_energy = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit_energy(&mut self) -> &mut super::common::ImageData {
+        self.unit_energy.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit_energy(&mut self) -> super::common::ImageData {
+        self.unit_energy.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData unit_energy_ratio = 18;
+
+    pub fn unit_energy_ratio(&self) -> &super::common::ImageData {
+        self.unit_energy_ratio.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit_energy_ratio(&mut self) {
+        self.unit_energy_ratio.clear();
+    }
+
+    pub fn has_unit_energy_ratio(&self) -> bool {
+        self.unit_energy_ratio.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_energy_ratio(&mut self, v: super::common::ImageData) {
+        self.unit_energy_ratio = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit_energy_ratio(&mut self) -> &mut super::common::ImageData {
+        self.unit_energy_ratio.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit_energy_ratio(&mut self) -> super::common::ImageData {
+        self.unit_energy_ratio.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData unit_shields = 10;
+
+    pub fn unit_shields(&self) -> &super::common::ImageData {
+        self.unit_shields.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit_shields(&mut self) {
+        self.unit_shields.clear();
+    }
+
+    pub fn has_unit_shields(&self) -> bool {
+        self.unit_shields.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_shields(&mut self, v: super::common::ImageData) {
+        self.unit_shields = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit_shields(&mut self) -> &mut super::common::ImageData {
+        self.unit_shields.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit_shields(&mut self) -> super::common::ImageData {
+        self.unit_shields.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData unit_shields_ratio = 19;
+
+    pub fn unit_shields_ratio(&self) -> &super::common::ImageData {
+        self.unit_shields_ratio.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit_shields_ratio(&mut self) {
+        self.unit_shields_ratio.clear();
+    }
+
+    pub fn has_unit_shields_ratio(&self) -> bool {
+        self.unit_shields_ratio.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_shields_ratio(&mut self, v: super::common::ImageData) {
+        self.unit_shields_ratio = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit_shields_ratio(&mut self) -> &mut super::common::ImageData {
+        self.unit_shields_ratio.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit_shields_ratio(&mut self) -> super::common::ImageData {
+        self.unit_shields_ratio.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData player_relative = 11;
+
+    pub fn player_relative(&self) -> &super::common::ImageData {
+        self.player_relative.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_player_relative(&mut self) {
+        self.player_relative.clear();
+    }
+
+    pub fn has_player_relative(&self) -> bool {
+        self.player_relative.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_player_relative(&mut self, v: super::common::ImageData) {
+        self.player_relative = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_player_relative(&mut self) -> &mut super::common::ImageData {
+        self.player_relative.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_player_relative(&mut self) -> super::common::ImageData {
+        self.player_relative.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData unit_density_aa = 14;
+
+    pub fn unit_density_aa(&self) -> &super::common::ImageData {
+        self.unit_density_aa.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit_density_aa(&mut self) {
+        self.unit_density_aa.clear();
+    }
+
+    pub fn has_unit_density_aa(&self) -> bool {
+        self.unit_density_aa.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_density_aa(&mut self, v: super::common::ImageData) {
+        self.unit_density_aa = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit_density_aa(&mut self) -> &mut super::common::ImageData {
+        self.unit_density_aa.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit_density_aa(&mut self) -> super::common::ImageData {
+        self.unit_density_aa.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData unit_density = 15;
+
+    pub fn unit_density(&self) -> &super::common::ImageData {
+        self.unit_density.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit_density(&mut self) {
+        self.unit_density.clear();
+    }
+
+    pub fn has_unit_density(&self) -> bool {
+        self.unit_density.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_density(&mut self, v: super::common::ImageData) {
+        self.unit_density = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit_density(&mut self) -> &mut super::common::ImageData {
+        self.unit_density.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit_density(&mut self) -> super::common::ImageData {
+        self.unit_density.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData effects = 20;
+
+    pub fn effects(&self) -> &super::common::ImageData {
+        self.effects.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_effects(&mut self) {
+        self.effects.clear();
+    }
+
+    pub fn has_effects(&self) -> bool {
+        self.effects.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_effects(&mut self, v: super::common::ImageData) {
+        self.effects = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_effects(&mut self) -> &mut super::common::ImageData {
+        self.effects.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_effects(&mut self) -> super::common::ImageData {
+        self.effects.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData hallucinations = 21;
+
+    pub fn hallucinations(&self) -> &super::common::ImageData {
+        self.hallucinations.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_hallucinations(&mut self) {
+        self.hallucinations.clear();
+    }
+
+    pub fn has_hallucinations(&self) -> bool {
+        self.hallucinations.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_hallucinations(&mut self, v: super::common::ImageData) {
+        self.hallucinations = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_hallucinations(&mut self) -> &mut super::common::ImageData {
+        self.hallucinations.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_hallucinations(&mut self) -> super::common::ImageData {
+        self.hallucinations.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData cloaked = 22;
+
+    pub fn cloaked(&self) -> &super::common::ImageData {
+        self.cloaked.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_cloaked(&mut self) {
+        self.cloaked.clear();
+    }
+
+    pub fn has_cloaked(&self) -> bool {
+        self.cloaked.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_cloaked(&mut self, v: super::common::ImageData) {
+        self.cloaked = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_cloaked(&mut self) -> &mut super::common::ImageData {
+        self.cloaked.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_cloaked(&mut self) -> super::common::ImageData {
+        self.cloaked.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData blip = 23;
+
+    pub fn blip(&self) -> &super::common::ImageData {
+        self.blip.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_blip(&mut self) {
+        self.blip.clear();
+    }
+
+    pub fn has_blip(&self) -> bool {
+        self.blip.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_blip(&mut self, v: super::common::ImageData) {
+        self.blip = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_blip(&mut self) -> &mut super::common::ImageData {
+        self.blip.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_blip(&mut self) -> super::common::ImageData {
+        self.blip.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData buffs = 24;
+
+    pub fn buffs(&self) -> &super::common::ImageData {
+        self.buffs.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_buffs(&mut self) {
+        self.buffs.clear();
+    }
+
+    pub fn has_buffs(&self) -> bool {
+        self.buffs.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_buffs(&mut self, v: super::common::ImageData) {
+        self.buffs = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_buffs(&mut self) -> &mut super::common::ImageData {
+        self.buffs.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_buffs(&mut self) -> super::common::ImageData {
+        self.buffs.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData buff_duration = 26;
+
+    pub fn buff_duration(&self) -> &super::common::ImageData {
+        self.buff_duration.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_buff_duration(&mut self) {
+        self.buff_duration.clear();
+    }
+
+    pub fn has_buff_duration(&self) -> bool {
+        self.buff_duration.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_buff_duration(&mut self, v: super::common::ImageData) {
+        self.buff_duration = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_buff_duration(&mut self) -> &mut super::common::ImageData {
+        self.buff_duration.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_buff_duration(&mut self) -> super::common::ImageData {
+        self.buff_duration.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData active = 25;
+
+    pub fn active(&self) -> &super::common::ImageData {
+        self.active.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_active(&mut self) {
+        self.active.clear();
+    }
+
+    pub fn has_active(&self) -> bool {
+        self.active.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_active(&mut self, v: super::common::ImageData) {
+        self.active = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_active(&mut self) -> &mut super::common::ImageData {
+        self.active.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_active(&mut self) -> super::common::ImageData {
+        self.active.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData build_progress = 27;
+
+    pub fn build_progress(&self) -> &super::common::ImageData {
+        self.build_progress.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_build_progress(&mut self) {
+        self.build_progress.clear();
+    }
+
+    pub fn has_build_progress(&self) -> bool {
+        self.build_progress.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_build_progress(&mut self, v: super::common::ImageData) {
+        self.build_progress = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_build_progress(&mut self) -> &mut super::common::ImageData {
+        self.build_progress.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_build_progress(&mut self) -> super::common::ImageData {
+        self.build_progress.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData buildable = 28;
+
+    pub fn buildable(&self) -> &super::common::ImageData {
+        self.buildable.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_buildable(&mut self) {
+        self.buildable.clear();
+    }
+
+    pub fn has_buildable(&self) -> bool {
+        self.buildable.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_buildable(&mut self, v: super::common::ImageData) {
+        self.buildable = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_buildable(&mut self) -> &mut super::common::ImageData {
+        self.buildable.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_buildable(&mut self) -> super::common::ImageData {
+        self.buildable.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData pathable = 29;
+
+    pub fn pathable(&self) -> &super::common::ImageData {
+        self.pathable.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_pathable(&mut self) {
+        self.pathable.clear();
+    }
+
+    pub fn has_pathable(&self) -> bool {
+        self.pathable.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_pathable(&mut self, v: super::common::ImageData) {
+        self.pathable = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_pathable(&mut self) -> &mut super::common::ImageData {
+        self.pathable.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_pathable(&mut self) -> super::common::ImageData {
+        self.pathable.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData placeholder = 30;
+
+    pub fn placeholder(&self) -> &super::common::ImageData {
+        self.placeholder.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_placeholder(&mut self) {
+        self.placeholder.clear();
+    }
+
+    pub fn has_placeholder(&self) -> bool {
+        self.placeholder.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_placeholder(&mut self, v: super::common::ImageData) {
+        self.placeholder = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_placeholder(&mut self) -> &mut super::common::ImageData {
+        self.placeholder.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_placeholder(&mut self) -> super::common::ImageData {
+        self.placeholder.take().unwrap_or_else(|| super::common::ImageData::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
@@ -826,6 +1696,336 @@ impl FeatureLayersMinimap {
         ::std::default::Default::default()
     }
 
+    // optional .SC2APIProtocol.ImageData height_map = 1;
+
+    pub fn height_map(&self) -> &super::common::ImageData {
+        self.height_map.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_height_map(&mut self) {
+        self.height_map.clear();
+    }
+
+    pub fn has_height_map(&self) -> bool {
+        self.height_map.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_height_map(&mut self, v: super::common::ImageData) {
+        self.height_map = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_height_map(&mut self) -> &mut super::common::ImageData {
+        self.height_map.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_height_map(&mut self) -> super::common::ImageData {
+        self.height_map.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData visibility_map = 2;
+
+    pub fn visibility_map(&self) -> &super::common::ImageData {
+        self.visibility_map.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_visibility_map(&mut self) {
+        self.visibility_map.clear();
+    }
+
+    pub fn has_visibility_map(&self) -> bool {
+        self.visibility_map.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_visibility_map(&mut self, v: super::common::ImageData) {
+        self.visibility_map = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_visibility_map(&mut self) -> &mut super::common::ImageData {
+        self.visibility_map.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_visibility_map(&mut self) -> super::common::ImageData {
+        self.visibility_map.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData creep = 3;
+
+    pub fn creep(&self) -> &super::common::ImageData {
+        self.creep.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_creep(&mut self) {
+        self.creep.clear();
+    }
+
+    pub fn has_creep(&self) -> bool {
+        self.creep.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_creep(&mut self, v: super::common::ImageData) {
+        self.creep = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_creep(&mut self) -> &mut super::common::ImageData {
+        self.creep.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_creep(&mut self) -> super::common::ImageData {
+        self.creep.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData camera = 4;
+
+    pub fn camera(&self) -> &super::common::ImageData {
+        self.camera.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_camera(&mut self) {
+        self.camera.clear();
+    }
+
+    pub fn has_camera(&self) -> bool {
+        self.camera.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_camera(&mut self, v: super::common::ImageData) {
+        self.camera = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_camera(&mut self) -> &mut super::common::ImageData {
+        self.camera.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_camera(&mut self) -> super::common::ImageData {
+        self.camera.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData player_id = 5;
+
+    pub fn player_id(&self) -> &super::common::ImageData {
+        self.player_id.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_player_id(&mut self) {
+        self.player_id.clear();
+    }
+
+    pub fn has_player_id(&self) -> bool {
+        self.player_id.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_player_id(&mut self, v: super::common::ImageData) {
+        self.player_id = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_player_id(&mut self) -> &mut super::common::ImageData {
+        self.player_id.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_player_id(&mut self) -> super::common::ImageData {
+        self.player_id.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData player_relative = 6;
+
+    pub fn player_relative(&self) -> &super::common::ImageData {
+        self.player_relative.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_player_relative(&mut self) {
+        self.player_relative.clear();
+    }
+
+    pub fn has_player_relative(&self) -> bool {
+        self.player_relative.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_player_relative(&mut self, v: super::common::ImageData) {
+        self.player_relative = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_player_relative(&mut self) -> &mut super::common::ImageData {
+        self.player_relative.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_player_relative(&mut self) -> super::common::ImageData {
+        self.player_relative.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData selected = 7;
+
+    pub fn selected(&self) -> &super::common::ImageData {
+        self.selected.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_selected(&mut self) {
+        self.selected.clear();
+    }
+
+    pub fn has_selected(&self) -> bool {
+        self.selected.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_selected(&mut self, v: super::common::ImageData) {
+        self.selected = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_selected(&mut self) -> &mut super::common::ImageData {
+        self.selected.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_selected(&mut self) -> super::common::ImageData {
+        self.selected.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData alerts = 9;
+
+    pub fn alerts(&self) -> &super::common::ImageData {
+        self.alerts.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_alerts(&mut self) {
+        self.alerts.clear();
+    }
+
+    pub fn has_alerts(&self) -> bool {
+        self.alerts.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_alerts(&mut self, v: super::common::ImageData) {
+        self.alerts = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_alerts(&mut self) -> &mut super::common::ImageData {
+        self.alerts.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_alerts(&mut self) -> super::common::ImageData {
+        self.alerts.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData buildable = 10;
+
+    pub fn buildable(&self) -> &super::common::ImageData {
+        self.buildable.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_buildable(&mut self) {
+        self.buildable.clear();
+    }
+
+    pub fn has_buildable(&self) -> bool {
+        self.buildable.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_buildable(&mut self, v: super::common::ImageData) {
+        self.buildable = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_buildable(&mut self) -> &mut super::common::ImageData {
+        self.buildable.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_buildable(&mut self) -> super::common::ImageData {
+        self.buildable.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData pathable = 11;
+
+    pub fn pathable(&self) -> &super::common::ImageData {
+        self.pathable.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_pathable(&mut self) {
+        self.pathable.clear();
+    }
+
+    pub fn has_pathable(&self) -> bool {
+        self.pathable.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_pathable(&mut self, v: super::common::ImageData) {
+        self.pathable = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_pathable(&mut self) -> &mut super::common::ImageData {
+        self.pathable.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_pathable(&mut self) -> super::common::ImageData {
+        self.pathable.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData unit_type = 8;
+
+    pub fn unit_type(&self) -> &super::common::ImageData {
+        self.unit_type.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit_type(&mut self) {
+        self.unit_type.clear();
+    }
+
+    pub fn has_unit_type(&self) -> bool {
+        self.unit_type.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_type(&mut self, v: super::common::ImageData) {
+        self.unit_type = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit_type(&mut self) -> &mut super::common::ImageData {
+        self.unit_type.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit_type(&mut self) -> super::common::ImageData {
+        self.unit_type.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
         let mut fields = ::std::vec::Vec::with_capacity(11);
         let mut oneofs = ::std::vec::Vec::with_capacity(0);
@@ -1119,6 +2319,66 @@ impl<'a> ::std::default::Default for &'a ObservationRender {
 impl ObservationRender {
     pub fn new() -> ObservationRender {
         ::std::default::Default::default()
+    }
+
+    // optional .SC2APIProtocol.ImageData map = 1;
+
+    pub fn map(&self) -> &super::common::ImageData {
+        self.map.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_map(&mut self) {
+        self.map.clear();
+    }
+
+    pub fn has_map(&self) -> bool {
+        self.map.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_map(&mut self, v: super::common::ImageData) {
+        self.map = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_map(&mut self) -> &mut super::common::ImageData {
+        self.map.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_map(&mut self) -> super::common::ImageData {
+        self.map.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData minimap = 2;
+
+    pub fn minimap(&self) -> &super::common::ImageData {
+        self.minimap.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_minimap(&mut self) {
+        self.minimap.clear();
+    }
+
+    pub fn has_minimap(&self) -> bool {
+        self.minimap.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_minimap(&mut self, v: super::common::ImageData) {
+        self.minimap = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_minimap(&mut self) -> &mut super::common::ImageData {
+        self.minimap.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_minimap(&mut self) -> super::common::ImageData {
+        self.minimap.take().unwrap_or_else(|| super::common::ImageData::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
@@ -2032,6 +3292,36 @@ impl ActionSpatialCameraMove {
         ::std::default::Default::default()
     }
 
+    // optional .SC2APIProtocol.PointI center_minimap = 1;
+
+    pub fn center_minimap(&self) -> &super::common::PointI {
+        self.center_minimap.as_ref().unwrap_or_else(|| <super::common::PointI as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_center_minimap(&mut self) {
+        self.center_minimap.clear();
+    }
+
+    pub fn has_center_minimap(&self) -> bool {
+        self.center_minimap.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_center_minimap(&mut self, v: super::common::PointI) {
+        self.center_minimap = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_center_minimap(&mut self) -> &mut super::common::PointI {
+        self.center_minimap.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_center_minimap(&mut self) -> super::common::PointI {
+        self.center_minimap.take().unwrap_or_else(|| super::common::PointI::new())
+    }
+
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
         let mut fields = ::std::vec::Vec::with_capacity(1);
         let mut oneofs = ::std::vec::Vec::with_capacity(0);
@@ -2155,6 +3445,36 @@ impl<'a> ::std::default::Default for &'a ActionSpatialUnitSelectionPoint {
 impl ActionSpatialUnitSelectionPoint {
     pub fn new() -> ActionSpatialUnitSelectionPoint {
         ::std::default::Default::default()
+    }
+
+    // optional .SC2APIProtocol.PointI selection_screen_coord = 1;
+
+    pub fn selection_screen_coord(&self) -> &super::common::PointI {
+        self.selection_screen_coord.as_ref().unwrap_or_else(|| <super::common::PointI as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_selection_screen_coord(&mut self) {
+        self.selection_screen_coord.clear();
+    }
+
+    pub fn has_selection_screen_coord(&self) -> bool {
+        self.selection_screen_coord.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_selection_screen_coord(&mut self, v: super::common::PointI) {
+        self.selection_screen_coord = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_selection_screen_coord(&mut self) -> &mut super::common::PointI {
+        self.selection_screen_coord.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_selection_screen_coord(&mut self) -> super::common::PointI {
+        self.selection_screen_coord.take().unwrap_or_else(|| super::common::PointI::new())
     }
 
     // optional .SC2APIProtocol.ActionSpatialUnitSelectionPoint.Type type = 2;
@@ -2389,6 +3709,31 @@ impl<'a> ::std::default::Default for &'a ActionSpatialUnitSelectionRect {
 impl ActionSpatialUnitSelectionRect {
     pub fn new() -> ActionSpatialUnitSelectionRect {
         ::std::default::Default::default()
+    }
+
+    // repeated .SC2APIProtocol.RectangleI selection_screen_coord = 1;
+
+    pub fn selection_screen_coord(&self) -> &[super::common::RectangleI] {
+        &self.selection_screen_coord
+    }
+
+    pub fn clear_selection_screen_coord(&mut self) {
+        self.selection_screen_coord.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_selection_screen_coord(&mut self, v: ::std::vec::Vec<super::common::RectangleI>) {
+        self.selection_screen_coord = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_selection_screen_coord(&mut self) -> &mut ::std::vec::Vec<super::common::RectangleI> {
+        &mut self.selection_screen_coord
+    }
+
+    // Take field
+    pub fn take_selection_screen_coord(&mut self) -> ::std::vec::Vec<super::common::RectangleI> {
+        ::std::mem::replace(&mut self.selection_screen_coord, ::std::vec::Vec::new())
     }
 
     // optional bool selection_add = 2;

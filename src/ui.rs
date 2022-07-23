@@ -49,6 +49,31 @@ impl ObservationUI {
         ::std::default::Default::default()
     }
 
+    // repeated .SC2APIProtocol.ControlGroup groups = 1;
+
+    pub fn groups(&self) -> &[ControlGroup] {
+        &self.groups
+    }
+
+    pub fn clear_groups(&mut self) {
+        self.groups.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_groups(&mut self, v: ::std::vec::Vec<ControlGroup>) {
+        self.groups = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_groups(&mut self) -> &mut ::std::vec::Vec<ControlGroup> {
+        &mut self.groups
+    }
+
+    // Take field
+    pub fn take_groups(&mut self) -> ::std::vec::Vec<ControlGroup> {
+        ::std::mem::replace(&mut self.groups, ::std::vec::Vec::new())
+    }
+
     // optional .SC2APIProtocol.SinglePanel single = 2;
 
     pub fn single(&self) -> &SinglePanel {
@@ -852,6 +877,36 @@ impl UnitInfo {
         self.build_progress = ::std::option::Option::Some(v);
     }
 
+    // optional .SC2APIProtocol.UnitInfo add_on = 8;
+
+    pub fn add_on(&self) -> &UnitInfo {
+        self.add_on.as_ref().unwrap_or_else(|| <UnitInfo as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_add_on(&mut self) {
+        self.add_on.clear();
+    }
+
+    pub fn has_add_on(&self) -> bool {
+        self.add_on.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_add_on(&mut self, v: UnitInfo) {
+        self.add_on = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_add_on(&mut self) -> &mut UnitInfo {
+        self.add_on.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_add_on(&mut self) -> UnitInfo {
+        self.add_on.take().unwrap_or_else(|| UnitInfo::new())
+    }
+
     // optional int32 max_health = 9;
 
     pub fn max_health(&self) -> i32 {
@@ -1200,6 +1255,36 @@ impl SinglePanel {
         ::std::default::Default::default()
     }
 
+    // optional .SC2APIProtocol.UnitInfo unit = 1;
+
+    pub fn unit(&self) -> &UnitInfo {
+        self.unit.as_ref().unwrap_or_else(|| <UnitInfo as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit(&mut self) {
+        self.unit.clear();
+    }
+
+    pub fn has_unit(&self) -> bool {
+        self.unit.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit(&mut self, v: UnitInfo) {
+        self.unit = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit(&mut self) -> &mut UnitInfo {
+        self.unit.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit(&mut self) -> UnitInfo {
+        self.unit.take().unwrap_or_else(|| UnitInfo::new())
+    }
+
     // optional int32 attack_upgrade_level = 2;
 
     pub fn attack_upgrade_level(&self) -> i32 {
@@ -1255,6 +1340,31 @@ impl SinglePanel {
     // Param is passed by value, moved
     pub fn set_shield_upgrade_level(&mut self, v: i32) {
         self.shield_upgrade_level = ::std::option::Option::Some(v);
+    }
+
+    // repeated int32 buffs = 5;
+
+    pub fn buffs(&self) -> &[i32] {
+        &self.buffs
+    }
+
+    pub fn clear_buffs(&mut self) {
+        self.buffs.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_buffs(&mut self, v: ::std::vec::Vec<i32>) {
+        self.buffs = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_buffs(&mut self) -> &mut ::std::vec::Vec<i32> {
+        &mut self.buffs
+    }
+
+    // Take field
+    pub fn take_buffs(&mut self) -> ::std::vec::Vec<i32> {
+        ::std::mem::replace(&mut self.buffs, ::std::vec::Vec::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
@@ -1447,6 +1557,31 @@ impl MultiPanel {
         ::std::default::Default::default()
     }
 
+    // repeated .SC2APIProtocol.UnitInfo units = 1;
+
+    pub fn units(&self) -> &[UnitInfo] {
+        &self.units
+    }
+
+    pub fn clear_units(&mut self) {
+        self.units.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_units(&mut self, v: ::std::vec::Vec<UnitInfo>) {
+        self.units = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_units(&mut self) -> &mut ::std::vec::Vec<UnitInfo> {
+        &mut self.units
+    }
+
+    // Take field
+    pub fn take_units(&mut self) -> ::std::vec::Vec<UnitInfo> {
+        ::std::mem::replace(&mut self.units, ::std::vec::Vec::new())
+    }
+
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
         let mut fields = ::std::vec::Vec::with_capacity(1);
         let mut oneofs = ::std::vec::Vec::with_capacity(0);
@@ -1572,6 +1707,61 @@ impl<'a> ::std::default::Default for &'a CargoPanel {
 impl CargoPanel {
     pub fn new() -> CargoPanel {
         ::std::default::Default::default()
+    }
+
+    // optional .SC2APIProtocol.UnitInfo unit = 1;
+
+    pub fn unit(&self) -> &UnitInfo {
+        self.unit.as_ref().unwrap_or_else(|| <UnitInfo as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit(&mut self) {
+        self.unit.clear();
+    }
+
+    pub fn has_unit(&self) -> bool {
+        self.unit.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit(&mut self, v: UnitInfo) {
+        self.unit = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit(&mut self) -> &mut UnitInfo {
+        self.unit.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit(&mut self) -> UnitInfo {
+        self.unit.take().unwrap_or_else(|| UnitInfo::new())
+    }
+
+    // repeated .SC2APIProtocol.UnitInfo passengers = 2;
+
+    pub fn passengers(&self) -> &[UnitInfo] {
+        &self.passengers
+    }
+
+    pub fn clear_passengers(&mut self) {
+        self.passengers.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_passengers(&mut self, v: ::std::vec::Vec<UnitInfo>) {
+        self.passengers = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_passengers(&mut self) -> &mut ::std::vec::Vec<UnitInfo> {
+        &mut self.passengers
+    }
+
+    // Take field
+    pub fn take_passengers(&mut self) -> ::std::vec::Vec<UnitInfo> {
+        ::std::mem::replace(&mut self.passengers, ::std::vec::Vec::new())
     }
 
     // optional int32 slots_available = 3;
@@ -1929,6 +2119,86 @@ impl<'a> ::std::default::Default for &'a ProductionPanel {
 impl ProductionPanel {
     pub fn new() -> ProductionPanel {
         ::std::default::Default::default()
+    }
+
+    // optional .SC2APIProtocol.UnitInfo unit = 1;
+
+    pub fn unit(&self) -> &UnitInfo {
+        self.unit.as_ref().unwrap_or_else(|| <UnitInfo as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_unit(&mut self) {
+        self.unit.clear();
+    }
+
+    pub fn has_unit(&self) -> bool {
+        self.unit.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit(&mut self, v: UnitInfo) {
+        self.unit = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_unit(&mut self) -> &mut UnitInfo {
+        self.unit.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_unit(&mut self) -> UnitInfo {
+        self.unit.take().unwrap_or_else(|| UnitInfo::new())
+    }
+
+    // repeated .SC2APIProtocol.UnitInfo build_queue = 2;
+
+    pub fn build_queue(&self) -> &[UnitInfo] {
+        &self.build_queue
+    }
+
+    pub fn clear_build_queue(&mut self) {
+        self.build_queue.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_build_queue(&mut self, v: ::std::vec::Vec<UnitInfo>) {
+        self.build_queue = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_build_queue(&mut self) -> &mut ::std::vec::Vec<UnitInfo> {
+        &mut self.build_queue
+    }
+
+    // Take field
+    pub fn take_build_queue(&mut self) -> ::std::vec::Vec<UnitInfo> {
+        ::std::mem::replace(&mut self.build_queue, ::std::vec::Vec::new())
+    }
+
+    // repeated .SC2APIProtocol.BuildItem production_queue = 3;
+
+    pub fn production_queue(&self) -> &[BuildItem] {
+        &self.production_queue
+    }
+
+    pub fn clear_production_queue(&mut self) {
+        self.production_queue.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_production_queue(&mut self, v: ::std::vec::Vec<BuildItem>) {
+        self.production_queue = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_production_queue(&mut self) -> &mut ::std::vec::Vec<BuildItem> {
+        &mut self.production_queue
+    }
+
+    // Take field
+    pub fn take_production_queue(&mut self) -> ::std::vec::Vec<BuildItem> {
+        ::std::mem::replace(&mut self.production_queue, ::std::vec::Vec::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {

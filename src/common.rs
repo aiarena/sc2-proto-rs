@@ -248,6 +248,36 @@ impl ImageData {
         self.bits_per_pixel = ::std::option::Option::Some(v);
     }
 
+    // optional .SC2APIProtocol.Size2DI size = 2;
+
+    pub fn size(&self) -> &Size2DI {
+        self.size.as_ref().unwrap_or_else(|| <Size2DI as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_size(&mut self) {
+        self.size.clear();
+    }
+
+    pub fn has_size(&self) -> bool {
+        self.size.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_size(&mut self, v: Size2DI) {
+        self.size = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_size(&mut self) -> &mut Size2DI {
+        self.size.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_size(&mut self) -> Size2DI {
+        self.size.take().unwrap_or_else(|| Size2DI::new())
+    }
+
     // optional bytes data = 3;
 
     pub fn data(&self) -> &[u8] {
@@ -617,6 +647,66 @@ impl<'a> ::std::default::Default for &'a RectangleI {
 impl RectangleI {
     pub fn new() -> RectangleI {
         ::std::default::Default::default()
+    }
+
+    // optional .SC2APIProtocol.PointI p0 = 1;
+
+    pub fn p0(&self) -> &PointI {
+        self.p0.as_ref().unwrap_or_else(|| <PointI as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_p0(&mut self) {
+        self.p0.clear();
+    }
+
+    pub fn has_p0(&self) -> bool {
+        self.p0.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_p0(&mut self, v: PointI) {
+        self.p0 = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_p0(&mut self) -> &mut PointI {
+        self.p0.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_p0(&mut self) -> PointI {
+        self.p0.take().unwrap_or_else(|| PointI::new())
+    }
+
+    // optional .SC2APIProtocol.PointI p1 = 2;
+
+    pub fn p1(&self) -> &PointI {
+        self.p1.as_ref().unwrap_or_else(|| <PointI as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_p1(&mut self) {
+        self.p1.clear();
+    }
+
+    pub fn has_p1(&self) -> bool {
+        self.p1.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_p1(&mut self, v: PointI) {
+        self.p1 = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_p1(&mut self) -> &mut PointI {
+        self.p1.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_p1(&mut self) -> PointI {
+        self.p1.take().unwrap_or_else(|| PointI::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {

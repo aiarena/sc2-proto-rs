@@ -57,6 +57,181 @@ impl StartRaw {
         ::std::default::Default::default()
     }
 
+    // optional .SC2APIProtocol.Size2DI map_size = 1;
+
+    pub fn map_size(&self) -> &super::common::Size2DI {
+        self.map_size.as_ref().unwrap_or_else(|| <super::common::Size2DI as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_map_size(&mut self) {
+        self.map_size.clear();
+    }
+
+    pub fn has_map_size(&self) -> bool {
+        self.map_size.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_map_size(&mut self, v: super::common::Size2DI) {
+        self.map_size = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_map_size(&mut self) -> &mut super::common::Size2DI {
+        self.map_size.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_map_size(&mut self) -> super::common::Size2DI {
+        self.map_size.take().unwrap_or_else(|| super::common::Size2DI::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData pathing_grid = 2;
+
+    pub fn pathing_grid(&self) -> &super::common::ImageData {
+        self.pathing_grid.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_pathing_grid(&mut self) {
+        self.pathing_grid.clear();
+    }
+
+    pub fn has_pathing_grid(&self) -> bool {
+        self.pathing_grid.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_pathing_grid(&mut self, v: super::common::ImageData) {
+        self.pathing_grid = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_pathing_grid(&mut self) -> &mut super::common::ImageData {
+        self.pathing_grid.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_pathing_grid(&mut self) -> super::common::ImageData {
+        self.pathing_grid.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData terrain_height = 3;
+
+    pub fn terrain_height(&self) -> &super::common::ImageData {
+        self.terrain_height.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_terrain_height(&mut self) {
+        self.terrain_height.clear();
+    }
+
+    pub fn has_terrain_height(&self) -> bool {
+        self.terrain_height.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_terrain_height(&mut self, v: super::common::ImageData) {
+        self.terrain_height = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_terrain_height(&mut self) -> &mut super::common::ImageData {
+        self.terrain_height.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_terrain_height(&mut self) -> super::common::ImageData {
+        self.terrain_height.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData placement_grid = 4;
+
+    pub fn placement_grid(&self) -> &super::common::ImageData {
+        self.placement_grid.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_placement_grid(&mut self) {
+        self.placement_grid.clear();
+    }
+
+    pub fn has_placement_grid(&self) -> bool {
+        self.placement_grid.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_placement_grid(&mut self, v: super::common::ImageData) {
+        self.placement_grid = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_placement_grid(&mut self) -> &mut super::common::ImageData {
+        self.placement_grid.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_placement_grid(&mut self) -> super::common::ImageData {
+        self.placement_grid.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.RectangleI playable_area = 5;
+
+    pub fn playable_area(&self) -> &super::common::RectangleI {
+        self.playable_area.as_ref().unwrap_or_else(|| <super::common::RectangleI as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_playable_area(&mut self) {
+        self.playable_area.clear();
+    }
+
+    pub fn has_playable_area(&self) -> bool {
+        self.playable_area.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_playable_area(&mut self, v: super::common::RectangleI) {
+        self.playable_area = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_playable_area(&mut self) -> &mut super::common::RectangleI {
+        self.playable_area.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_playable_area(&mut self) -> super::common::RectangleI {
+        self.playable_area.take().unwrap_or_else(|| super::common::RectangleI::new())
+    }
+
+    // repeated .SC2APIProtocol.Point2D start_locations = 6;
+
+    pub fn start_locations(&self) -> &[super::common::Point2D] {
+        &self.start_locations
+    }
+
+    pub fn clear_start_locations(&mut self) {
+        self.start_locations.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_start_locations(&mut self, v: ::std::vec::Vec<super::common::Point2D>) {
+        self.start_locations = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_start_locations(&mut self) -> &mut ::std::vec::Vec<super::common::Point2D> {
+        &mut self.start_locations
+    }
+
+    // Take field
+    pub fn take_start_locations(&mut self) -> ::std::vec::Vec<super::common::Point2D> {
+        ::std::mem::replace(&mut self.start_locations, ::std::vec::Vec::new())
+    }
+
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
         let mut fields = ::std::vec::Vec::with_capacity(6);
         let mut oneofs = ::std::vec::Vec::with_capacity(0);
@@ -275,6 +450,171 @@ impl ObservationRaw {
         ::std::default::Default::default()
     }
 
+    // optional .SC2APIProtocol.PlayerRaw player = 1;
+
+    pub fn player(&self) -> &PlayerRaw {
+        self.player.as_ref().unwrap_or_else(|| <PlayerRaw as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_player(&mut self) {
+        self.player.clear();
+    }
+
+    pub fn has_player(&self) -> bool {
+        self.player.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_player(&mut self, v: PlayerRaw) {
+        self.player = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_player(&mut self) -> &mut PlayerRaw {
+        self.player.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_player(&mut self) -> PlayerRaw {
+        self.player.take().unwrap_or_else(|| PlayerRaw::new())
+    }
+
+    // repeated .SC2APIProtocol.Unit units = 2;
+
+    pub fn units(&self) -> &[Unit] {
+        &self.units
+    }
+
+    pub fn clear_units(&mut self) {
+        self.units.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_units(&mut self, v: ::std::vec::Vec<Unit>) {
+        self.units = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_units(&mut self) -> &mut ::std::vec::Vec<Unit> {
+        &mut self.units
+    }
+
+    // Take field
+    pub fn take_units(&mut self) -> ::std::vec::Vec<Unit> {
+        ::std::mem::replace(&mut self.units, ::std::vec::Vec::new())
+    }
+
+    // optional .SC2APIProtocol.MapState map_state = 3;
+
+    pub fn map_state(&self) -> &MapState {
+        self.map_state.as_ref().unwrap_or_else(|| <MapState as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_map_state(&mut self) {
+        self.map_state.clear();
+    }
+
+    pub fn has_map_state(&self) -> bool {
+        self.map_state.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_map_state(&mut self, v: MapState) {
+        self.map_state = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_map_state(&mut self) -> &mut MapState {
+        self.map_state.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_map_state(&mut self) -> MapState {
+        self.map_state.take().unwrap_or_else(|| MapState::new())
+    }
+
+    // optional .SC2APIProtocol.Event event = 4;
+
+    pub fn event(&self) -> &Event {
+        self.event.as_ref().unwrap_or_else(|| <Event as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_event(&mut self) {
+        self.event.clear();
+    }
+
+    pub fn has_event(&self) -> bool {
+        self.event.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_event(&mut self, v: Event) {
+        self.event = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_event(&mut self) -> &mut Event {
+        self.event.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_event(&mut self) -> Event {
+        self.event.take().unwrap_or_else(|| Event::new())
+    }
+
+    // repeated .SC2APIProtocol.Effect effects = 5;
+
+    pub fn effects(&self) -> &[Effect] {
+        &self.effects
+    }
+
+    pub fn clear_effects(&mut self) {
+        self.effects.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_effects(&mut self, v: ::std::vec::Vec<Effect>) {
+        self.effects = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_effects(&mut self) -> &mut ::std::vec::Vec<Effect> {
+        &mut self.effects
+    }
+
+    // Take field
+    pub fn take_effects(&mut self) -> ::std::vec::Vec<Effect> {
+        ::std::mem::replace(&mut self.effects, ::std::vec::Vec::new())
+    }
+
+    // repeated .SC2APIProtocol.RadarRing radar = 6;
+
+    pub fn radar(&self) -> &[RadarRing] {
+        &self.radar
+    }
+
+    pub fn clear_radar(&mut self) {
+        self.radar.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_radar(&mut self, v: ::std::vec::Vec<RadarRing>) {
+        self.radar = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_radar(&mut self) -> &mut ::std::vec::Vec<RadarRing> {
+        &mut self.radar
+    }
+
+    // Take field
+    pub fn take_radar(&mut self) -> ::std::vec::Vec<RadarRing> {
+        ::std::mem::replace(&mut self.radar, ::std::vec::Vec::new())
+    }
+
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
         let mut fields = ::std::vec::Vec::with_capacity(6);
         let mut oneofs = ::std::vec::Vec::with_capacity(0);
@@ -485,6 +825,36 @@ impl RadarRing {
         ::std::default::Default::default()
     }
 
+    // optional .SC2APIProtocol.Point pos = 1;
+
+    pub fn pos(&self) -> &super::common::Point {
+        self.pos.as_ref().unwrap_or_else(|| <super::common::Point as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_pos(&mut self) {
+        self.pos.clear();
+    }
+
+    pub fn has_pos(&self) -> bool {
+        self.pos.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_pos(&mut self, v: super::common::Point) {
+        self.pos = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_pos(&mut self) -> &mut super::common::Point {
+        self.pos.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_pos(&mut self) -> super::common::Point {
+        self.pos.take().unwrap_or_else(|| super::common::Point::new())
+    }
+
     // optional float radius = 2;
 
     pub fn radius(&self) -> f32 {
@@ -645,6 +1015,36 @@ impl<'a> ::std::default::Default for &'a PowerSource {
 impl PowerSource {
     pub fn new() -> PowerSource {
         ::std::default::Default::default()
+    }
+
+    // optional .SC2APIProtocol.Point pos = 1;
+
+    pub fn pos(&self) -> &super::common::Point {
+        self.pos.as_ref().unwrap_or_else(|| <super::common::Point as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_pos(&mut self) {
+        self.pos.clear();
+    }
+
+    pub fn has_pos(&self) -> bool {
+        self.pos.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_pos(&mut self, v: super::common::Point) {
+        self.pos = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_pos(&mut self) -> &mut super::common::Point {
+        self.pos.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_pos(&mut self) -> super::common::Point {
+        self.pos.take().unwrap_or_else(|| super::common::Point::new())
     }
 
     // optional float radius = 2;
@@ -842,6 +1242,86 @@ impl<'a> ::std::default::Default for &'a PlayerRaw {
 impl PlayerRaw {
     pub fn new() -> PlayerRaw {
         ::std::default::Default::default()
+    }
+
+    // repeated .SC2APIProtocol.PowerSource power_sources = 1;
+
+    pub fn power_sources(&self) -> &[PowerSource] {
+        &self.power_sources
+    }
+
+    pub fn clear_power_sources(&mut self) {
+        self.power_sources.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_power_sources(&mut self, v: ::std::vec::Vec<PowerSource>) {
+        self.power_sources = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_power_sources(&mut self) -> &mut ::std::vec::Vec<PowerSource> {
+        &mut self.power_sources
+    }
+
+    // Take field
+    pub fn take_power_sources(&mut self) -> ::std::vec::Vec<PowerSource> {
+        ::std::mem::replace(&mut self.power_sources, ::std::vec::Vec::new())
+    }
+
+    // optional .SC2APIProtocol.Point camera = 2;
+
+    pub fn camera(&self) -> &super::common::Point {
+        self.camera.as_ref().unwrap_or_else(|| <super::common::Point as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_camera(&mut self) {
+        self.camera.clear();
+    }
+
+    pub fn has_camera(&self) -> bool {
+        self.camera.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_camera(&mut self, v: super::common::Point) {
+        self.camera = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_camera(&mut self) -> &mut super::common::Point {
+        self.camera.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_camera(&mut self) -> super::common::Point {
+        self.camera.take().unwrap_or_else(|| super::common::Point::new())
+    }
+
+    // repeated uint32 upgrade_ids = 3;
+
+    pub fn upgrade_ids(&self) -> &[u32] {
+        &self.upgrade_ids
+    }
+
+    pub fn clear_upgrade_ids(&mut self) {
+        self.upgrade_ids.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_upgrade_ids(&mut self, v: ::std::vec::Vec<u32>) {
+        self.upgrade_ids = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_upgrade_ids(&mut self) -> &mut ::std::vec::Vec<u32> {
+        &mut self.upgrade_ids
+    }
+
+    // Take field
+    pub fn take_upgrade_ids(&mut self) -> ::std::vec::Vec<u32> {
+        ::std::mem::replace(&mut self.upgrade_ids, ::std::vec::Vec::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
@@ -1733,6 +2213,36 @@ impl RallyTarget {
         ::std::default::Default::default()
     }
 
+    // optional .SC2APIProtocol.Point point = 1;
+
+    pub fn point(&self) -> &super::common::Point {
+        self.point.as_ref().unwrap_or_else(|| <super::common::Point as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_point(&mut self) {
+        self.point.clear();
+    }
+
+    pub fn has_point(&self) -> bool {
+        self.point.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_point(&mut self, v: super::common::Point) {
+        self.point = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_point(&mut self) -> &mut super::common::Point {
+        self.point.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_point(&mut self) -> super::common::Point {
+        self.point.take().unwrap_or_else(|| super::common::Point::new())
+    }
+
     // optional uint64 tag = 2;
 
     pub fn tag(&self) -> u64 {
@@ -2078,6 +2588,36 @@ impl Unit {
         self.owner = ::std::option::Option::Some(v);
     }
 
+    // optional .SC2APIProtocol.Point pos = 6;
+
+    pub fn pos(&self) -> &super::common::Point {
+        self.pos.as_ref().unwrap_or_else(|| <super::common::Point as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_pos(&mut self) {
+        self.pos.clear();
+    }
+
+    pub fn has_pos(&self) -> bool {
+        self.pos.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_pos(&mut self, v: super::common::Point) {
+        self.pos = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_pos(&mut self) -> &mut super::common::Point {
+        self.pos.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_pos(&mut self) -> super::common::Point {
+        self.pos.take().unwrap_or_else(|| super::common::Point::new())
+    }
+
     // optional float facing = 7;
 
     pub fn facing(&self) -> f32 {
@@ -2155,6 +2695,31 @@ impl Unit {
     // Param is passed by value, moved
     pub fn set_cloak(&mut self, v: CloakState) {
         self.cloak = ::std::option::Option::Some(::protobuf::EnumOrUnknown::new(v));
+    }
+
+    // repeated uint32 buff_ids = 27;
+
+    pub fn buff_ids(&self) -> &[u32] {
+        &self.buff_ids
+    }
+
+    pub fn clear_buff_ids(&mut self) {
+        self.buff_ids.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_buff_ids(&mut self, v: ::std::vec::Vec<u32>) {
+        self.buff_ids = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_buff_ids(&mut self) -> &mut ::std::vec::Vec<u32> {
+        &mut self.buff_ids
+    }
+
+    // Take field
+    pub fn take_buff_ids(&mut self) -> ::std::vec::Vec<u32> {
+        ::std::mem::replace(&mut self.buff_ids, ::std::vec::Vec::new())
     }
 
     // optional float detect_range = 31;
@@ -2556,6 +3121,31 @@ impl Unit {
         self.is_hallucination = ::std::option::Option::Some(v);
     }
 
+    // repeated .SC2APIProtocol.UnitOrder orders = 22;
+
+    pub fn orders(&self) -> &[UnitOrder] {
+        &self.orders
+    }
+
+    pub fn clear_orders(&mut self) {
+        self.orders.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_orders(&mut self, v: ::std::vec::Vec<UnitOrder>) {
+        self.orders = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_orders(&mut self) -> &mut ::std::vec::Vec<UnitOrder> {
+        &mut self.orders
+    }
+
+    // Take field
+    pub fn take_orders(&mut self) -> ::std::vec::Vec<UnitOrder> {
+        ::std::mem::replace(&mut self.orders, ::std::vec::Vec::new())
+    }
+
     // optional uint64 add_on_tag = 23;
 
     pub fn add_on_tag(&self) -> u64 {
@@ -2573,6 +3163,31 @@ impl Unit {
     // Param is passed by value, moved
     pub fn set_add_on_tag(&mut self, v: u64) {
         self.add_on_tag = ::std::option::Option::Some(v);
+    }
+
+    // repeated .SC2APIProtocol.PassengerUnit passengers = 24;
+
+    pub fn passengers(&self) -> &[PassengerUnit] {
+        &self.passengers
+    }
+
+    pub fn clear_passengers(&mut self) {
+        self.passengers.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_passengers(&mut self, v: ::std::vec::Vec<PassengerUnit>) {
+        self.passengers = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_passengers(&mut self) -> &mut ::std::vec::Vec<PassengerUnit> {
+        &mut self.passengers
+    }
+
+    // Take field
+    pub fn take_passengers(&mut self) -> ::std::vec::Vec<PassengerUnit> {
+        ::std::mem::replace(&mut self.passengers, ::std::vec::Vec::new())
     }
 
     // optional int32 cargo_space_taken = 25;
@@ -2725,6 +3340,31 @@ impl Unit {
     // Param is passed by value, moved
     pub fn set_buff_duration_max(&mut self, v: i32) {
         self.buff_duration_max = ::std::option::Option::Some(v);
+    }
+
+    // repeated .SC2APIProtocol.RallyTarget rally_targets = 45;
+
+    pub fn rally_targets(&self) -> &[RallyTarget] {
+        &self.rally_targets
+    }
+
+    pub fn clear_rally_targets(&mut self) {
+        self.rally_targets.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_rally_targets(&mut self, v: ::std::vec::Vec<RallyTarget>) {
+        self.rally_targets = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_rally_targets(&mut self) -> &mut ::std::vec::Vec<RallyTarget> {
+        &mut self.rally_targets
+    }
+
+    // Take field
+    pub fn take_rally_targets(&mut self) -> ::std::vec::Vec<RallyTarget> {
+        ::std::mem::replace(&mut self.rally_targets, ::std::vec::Vec::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
@@ -3546,6 +4186,66 @@ impl MapState {
         ::std::default::Default::default()
     }
 
+    // optional .SC2APIProtocol.ImageData visibility = 1;
+
+    pub fn visibility(&self) -> &super::common::ImageData {
+        self.visibility.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_visibility(&mut self) {
+        self.visibility.clear();
+    }
+
+    pub fn has_visibility(&self) -> bool {
+        self.visibility.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_visibility(&mut self, v: super::common::ImageData) {
+        self.visibility = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_visibility(&mut self) -> &mut super::common::ImageData {
+        self.visibility.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_visibility(&mut self) -> super::common::ImageData {
+        self.visibility.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
+    // optional .SC2APIProtocol.ImageData creep = 2;
+
+    pub fn creep(&self) -> &super::common::ImageData {
+        self.creep.as_ref().unwrap_or_else(|| <super::common::ImageData as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_creep(&mut self) {
+        self.creep.clear();
+    }
+
+    pub fn has_creep(&self) -> bool {
+        self.creep.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_creep(&mut self, v: super::common::ImageData) {
+        self.creep = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_creep(&mut self) -> &mut super::common::ImageData {
+        self.creep.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_creep(&mut self) -> super::common::ImageData {
+        self.creep.take().unwrap_or_else(|| super::common::ImageData::new())
+    }
+
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
         let mut fields = ::std::vec::Vec::with_capacity(2);
         let mut oneofs = ::std::vec::Vec::with_capacity(0);
@@ -3684,6 +4384,31 @@ impl<'a> ::std::default::Default for &'a Event {
 impl Event {
     pub fn new() -> Event {
         ::std::default::Default::default()
+    }
+
+    // repeated uint64 dead_units = 1;
+
+    pub fn dead_units(&self) -> &[u64] {
+        &self.dead_units
+    }
+
+    pub fn clear_dead_units(&mut self) {
+        self.dead_units.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_dead_units(&mut self, v: ::std::vec::Vec<u64>) {
+        self.dead_units = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_dead_units(&mut self) -> &mut ::std::vec::Vec<u64> {
+        &mut self.dead_units
+    }
+
+    // Take field
+    pub fn take_dead_units(&mut self) -> ::std::vec::Vec<u64> {
+        ::std::mem::replace(&mut self.dead_units, ::std::vec::Vec::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
@@ -3836,6 +4561,31 @@ impl Effect {
     // Param is passed by value, moved
     pub fn set_effect_id(&mut self, v: u32) {
         self.effect_id = ::std::option::Option::Some(v);
+    }
+
+    // repeated .SC2APIProtocol.Point2D pos = 2;
+
+    pub fn pos(&self) -> &[super::common::Point2D] {
+        &self.pos
+    }
+
+    pub fn clear_pos(&mut self) {
+        self.pos.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_pos(&mut self, v: ::std::vec::Vec<super::common::Point2D>) {
+        self.pos = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_pos(&mut self) -> &mut ::std::vec::Vec<super::common::Point2D> {
+        &mut self.pos
+    }
+
+    // Take field
+    pub fn take_pos(&mut self) -> ::std::vec::Vec<super::common::Point2D> {
+        ::std::mem::replace(&mut self.pos, ::std::vec::Vec::new())
     }
 
     // optional .SC2APIProtocol.Alliance alliance = 3;
@@ -4532,6 +5282,31 @@ impl ActionRawUnitCommand {
         self.target = ::std::option::Option::Some(action_raw_unit_command::Target::TargetUnitTag(v))
     }
 
+    // repeated uint64 unit_tags = 4;
+
+    pub fn unit_tags(&self) -> &[u64] {
+        &self.unit_tags
+    }
+
+    pub fn clear_unit_tags(&mut self) {
+        self.unit_tags.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_tags(&mut self, v: ::std::vec::Vec<u64>) {
+        self.unit_tags = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_unit_tags(&mut self) -> &mut ::std::vec::Vec<u64> {
+        &mut self.unit_tags
+    }
+
+    // Take field
+    pub fn take_unit_tags(&mut self) -> ::std::vec::Vec<u64> {
+        ::std::mem::replace(&mut self.unit_tags, ::std::vec::Vec::new())
+    }
+
     // optional bool queue_command = 5;
 
     pub fn queue_command(&self) -> bool {
@@ -4782,6 +5557,36 @@ impl ActionRawCameraMove {
         ::std::default::Default::default()
     }
 
+    // optional .SC2APIProtocol.Point center_world_space = 1;
+
+    pub fn center_world_space(&self) -> &super::common::Point {
+        self.center_world_space.as_ref().unwrap_or_else(|| <super::common::Point as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_center_world_space(&mut self) {
+        self.center_world_space.clear();
+    }
+
+    pub fn has_center_world_space(&self) -> bool {
+        self.center_world_space.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_center_world_space(&mut self, v: super::common::Point) {
+        self.center_world_space = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_center_world_space(&mut self) -> &mut super::common::Point {
+        self.center_world_space.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_center_world_space(&mut self) -> super::common::Point {
+        self.center_world_space.take().unwrap_or_else(|| super::common::Point::new())
+    }
+
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
         let mut fields = ::std::vec::Vec::with_capacity(1);
         let mut oneofs = ::std::vec::Vec::with_capacity(0);
@@ -4924,6 +5729,31 @@ impl ActionRawToggleAutocast {
     // Param is passed by value, moved
     pub fn set_ability_id(&mut self, v: i32) {
         self.ability_id = ::std::option::Option::Some(v);
+    }
+
+    // repeated uint64 unit_tags = 2;
+
+    pub fn unit_tags(&self) -> &[u64] {
+        &self.unit_tags
+    }
+
+    pub fn clear_unit_tags(&mut self) {
+        self.unit_tags.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_unit_tags(&mut self, v: ::std::vec::Vec<u64>) {
+        self.unit_tags = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_unit_tags(&mut self) -> &mut ::std::vec::Vec<u64> {
+        &mut self.unit_tags
+    }
+
+    // Take field
+    pub fn take_unit_tags(&mut self) -> ::std::vec::Vec<u64> {
+        ::std::mem::replace(&mut self.unit_tags, ::std::vec::Vec::new())
     }
 
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {

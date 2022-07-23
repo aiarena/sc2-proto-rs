@@ -92,6 +92,36 @@ impl Score {
         self.score = ::std::option::Option::Some(v);
     }
 
+    // optional .SC2APIProtocol.ScoreDetails score_details = 8;
+
+    pub fn score_details(&self) -> &ScoreDetails {
+        self.score_details.as_ref().unwrap_or_else(|| <ScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_score_details(&mut self) {
+        self.score_details.clear();
+    }
+
+    pub fn has_score_details(&self) -> bool {
+        self.score_details.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_score_details(&mut self, v: ScoreDetails) {
+        self.score_details = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_score_details(&mut self) -> &mut ScoreDetails {
+        self.score_details.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_score_details(&mut self) -> ScoreDetails {
+        self.score_details.take().unwrap_or_else(|| ScoreDetails::new())
+    }
+
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
         let mut fields = ::std::vec::Vec::with_capacity(3);
         let mut oneofs = ::std::vec::Vec::with_capacity(0);
@@ -1092,6 +1122,426 @@ impl ScoreDetails {
     // Param is passed by value, moved
     pub fn set_spent_vespene(&mut self, v: f32) {
         self.spent_vespene = ::std::option::Option::Some(v);
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails food_used = 13;
+
+    pub fn food_used(&self) -> &CategoryScoreDetails {
+        self.food_used.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_food_used(&mut self) {
+        self.food_used.clear();
+    }
+
+    pub fn has_food_used(&self) -> bool {
+        self.food_used.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_food_used(&mut self, v: CategoryScoreDetails) {
+        self.food_used = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_food_used(&mut self) -> &mut CategoryScoreDetails {
+        self.food_used.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_food_used(&mut self) -> CategoryScoreDetails {
+        self.food_used.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails killed_minerals = 14;
+
+    pub fn killed_minerals(&self) -> &CategoryScoreDetails {
+        self.killed_minerals.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_killed_minerals(&mut self) {
+        self.killed_minerals.clear();
+    }
+
+    pub fn has_killed_minerals(&self) -> bool {
+        self.killed_minerals.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_killed_minerals(&mut self, v: CategoryScoreDetails) {
+        self.killed_minerals = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_killed_minerals(&mut self) -> &mut CategoryScoreDetails {
+        self.killed_minerals.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_killed_minerals(&mut self) -> CategoryScoreDetails {
+        self.killed_minerals.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails killed_vespene = 15;
+
+    pub fn killed_vespene(&self) -> &CategoryScoreDetails {
+        self.killed_vespene.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_killed_vespene(&mut self) {
+        self.killed_vespene.clear();
+    }
+
+    pub fn has_killed_vespene(&self) -> bool {
+        self.killed_vespene.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_killed_vespene(&mut self, v: CategoryScoreDetails) {
+        self.killed_vespene = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_killed_vespene(&mut self) -> &mut CategoryScoreDetails {
+        self.killed_vespene.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_killed_vespene(&mut self) -> CategoryScoreDetails {
+        self.killed_vespene.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails lost_minerals = 16;
+
+    pub fn lost_minerals(&self) -> &CategoryScoreDetails {
+        self.lost_minerals.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_lost_minerals(&mut self) {
+        self.lost_minerals.clear();
+    }
+
+    pub fn has_lost_minerals(&self) -> bool {
+        self.lost_minerals.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_lost_minerals(&mut self, v: CategoryScoreDetails) {
+        self.lost_minerals = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_lost_minerals(&mut self) -> &mut CategoryScoreDetails {
+        self.lost_minerals.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_lost_minerals(&mut self) -> CategoryScoreDetails {
+        self.lost_minerals.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails lost_vespene = 17;
+
+    pub fn lost_vespene(&self) -> &CategoryScoreDetails {
+        self.lost_vespene.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_lost_vespene(&mut self) {
+        self.lost_vespene.clear();
+    }
+
+    pub fn has_lost_vespene(&self) -> bool {
+        self.lost_vespene.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_lost_vespene(&mut self, v: CategoryScoreDetails) {
+        self.lost_vespene = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_lost_vespene(&mut self) -> &mut CategoryScoreDetails {
+        self.lost_vespene.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_lost_vespene(&mut self) -> CategoryScoreDetails {
+        self.lost_vespene.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails friendly_fire_minerals = 18;
+
+    pub fn friendly_fire_minerals(&self) -> &CategoryScoreDetails {
+        self.friendly_fire_minerals.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_friendly_fire_minerals(&mut self) {
+        self.friendly_fire_minerals.clear();
+    }
+
+    pub fn has_friendly_fire_minerals(&self) -> bool {
+        self.friendly_fire_minerals.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_friendly_fire_minerals(&mut self, v: CategoryScoreDetails) {
+        self.friendly_fire_minerals = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_friendly_fire_minerals(&mut self) -> &mut CategoryScoreDetails {
+        self.friendly_fire_minerals.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_friendly_fire_minerals(&mut self) -> CategoryScoreDetails {
+        self.friendly_fire_minerals.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails friendly_fire_vespene = 19;
+
+    pub fn friendly_fire_vespene(&self) -> &CategoryScoreDetails {
+        self.friendly_fire_vespene.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_friendly_fire_vespene(&mut self) {
+        self.friendly_fire_vespene.clear();
+    }
+
+    pub fn has_friendly_fire_vespene(&self) -> bool {
+        self.friendly_fire_vespene.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_friendly_fire_vespene(&mut self, v: CategoryScoreDetails) {
+        self.friendly_fire_vespene = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_friendly_fire_vespene(&mut self) -> &mut CategoryScoreDetails {
+        self.friendly_fire_vespene.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_friendly_fire_vespene(&mut self) -> CategoryScoreDetails {
+        self.friendly_fire_vespene.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails used_minerals = 20;
+
+    pub fn used_minerals(&self) -> &CategoryScoreDetails {
+        self.used_minerals.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_used_minerals(&mut self) {
+        self.used_minerals.clear();
+    }
+
+    pub fn has_used_minerals(&self) -> bool {
+        self.used_minerals.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_used_minerals(&mut self, v: CategoryScoreDetails) {
+        self.used_minerals = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_used_minerals(&mut self) -> &mut CategoryScoreDetails {
+        self.used_minerals.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_used_minerals(&mut self) -> CategoryScoreDetails {
+        self.used_minerals.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails used_vespene = 21;
+
+    pub fn used_vespene(&self) -> &CategoryScoreDetails {
+        self.used_vespene.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_used_vespene(&mut self) {
+        self.used_vespene.clear();
+    }
+
+    pub fn has_used_vespene(&self) -> bool {
+        self.used_vespene.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_used_vespene(&mut self, v: CategoryScoreDetails) {
+        self.used_vespene = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_used_vespene(&mut self) -> &mut CategoryScoreDetails {
+        self.used_vespene.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_used_vespene(&mut self) -> CategoryScoreDetails {
+        self.used_vespene.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails total_used_minerals = 22;
+
+    pub fn total_used_minerals(&self) -> &CategoryScoreDetails {
+        self.total_used_minerals.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_total_used_minerals(&mut self) {
+        self.total_used_minerals.clear();
+    }
+
+    pub fn has_total_used_minerals(&self) -> bool {
+        self.total_used_minerals.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_total_used_minerals(&mut self, v: CategoryScoreDetails) {
+        self.total_used_minerals = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_total_used_minerals(&mut self) -> &mut CategoryScoreDetails {
+        self.total_used_minerals.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_total_used_minerals(&mut self) -> CategoryScoreDetails {
+        self.total_used_minerals.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.CategoryScoreDetails total_used_vespene = 23;
+
+    pub fn total_used_vespene(&self) -> &CategoryScoreDetails {
+        self.total_used_vespene.as_ref().unwrap_or_else(|| <CategoryScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_total_used_vespene(&mut self) {
+        self.total_used_vespene.clear();
+    }
+
+    pub fn has_total_used_vespene(&self) -> bool {
+        self.total_used_vespene.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_total_used_vespene(&mut self, v: CategoryScoreDetails) {
+        self.total_used_vespene = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_total_used_vespene(&mut self) -> &mut CategoryScoreDetails {
+        self.total_used_vespene.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_total_used_vespene(&mut self) -> CategoryScoreDetails {
+        self.total_used_vespene.take().unwrap_or_else(|| CategoryScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.VitalScoreDetails total_damage_dealt = 24;
+
+    pub fn total_damage_dealt(&self) -> &VitalScoreDetails {
+        self.total_damage_dealt.as_ref().unwrap_or_else(|| <VitalScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_total_damage_dealt(&mut self) {
+        self.total_damage_dealt.clear();
+    }
+
+    pub fn has_total_damage_dealt(&self) -> bool {
+        self.total_damage_dealt.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_total_damage_dealt(&mut self, v: VitalScoreDetails) {
+        self.total_damage_dealt = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_total_damage_dealt(&mut self) -> &mut VitalScoreDetails {
+        self.total_damage_dealt.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_total_damage_dealt(&mut self) -> VitalScoreDetails {
+        self.total_damage_dealt.take().unwrap_or_else(|| VitalScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.VitalScoreDetails total_damage_taken = 25;
+
+    pub fn total_damage_taken(&self) -> &VitalScoreDetails {
+        self.total_damage_taken.as_ref().unwrap_or_else(|| <VitalScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_total_damage_taken(&mut self) {
+        self.total_damage_taken.clear();
+    }
+
+    pub fn has_total_damage_taken(&self) -> bool {
+        self.total_damage_taken.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_total_damage_taken(&mut self, v: VitalScoreDetails) {
+        self.total_damage_taken = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_total_damage_taken(&mut self) -> &mut VitalScoreDetails {
+        self.total_damage_taken.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_total_damage_taken(&mut self) -> VitalScoreDetails {
+        self.total_damage_taken.take().unwrap_or_else(|| VitalScoreDetails::new())
+    }
+
+    // optional .SC2APIProtocol.VitalScoreDetails total_healed = 26;
+
+    pub fn total_healed(&self) -> &VitalScoreDetails {
+        self.total_healed.as_ref().unwrap_or_else(|| <VitalScoreDetails as ::protobuf::Message>::default_instance())
+    }
+
+    pub fn clear_total_healed(&mut self) {
+        self.total_healed.clear();
+    }
+
+    pub fn has_total_healed(&self) -> bool {
+        self.total_healed.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_total_healed(&mut self, v: VitalScoreDetails) {
+        self.total_healed = ::protobuf::MessageField::some(v);
+    }
+
+    // Mutable pointer to the field.
+    // If field is not initialized, it is initialized with default value first.
+    pub fn mut_total_healed(&mut self) -> &mut VitalScoreDetails {
+        self.total_healed.mut_or_insert_default()
+    }
+
+    // Take field
+    pub fn take_total_healed(&mut self) -> VitalScoreDetails {
+        self.total_healed.take().unwrap_or_else(|| VitalScoreDetails::new())
     }
 
     // optional float current_apm = 27;

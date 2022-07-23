@@ -1,9 +1,9 @@
 #[cfg(feature = "generate")]
-use std::{env, ffi::OsStr, fs, io::prelude::*, path::Path};
-#[cfg(feature = "generate")]
-use protobuf_codegen::{Codegen,Customize};
+use protobuf_codegen::{Codegen, Customize};
 #[cfg(feature = "generate")]
 use protoc_bin_vendored::protoc_bin_path;
+#[cfg(feature = "generate")]
+use std::{env, ffi::OsStr, fs, io::prelude::*, path::Path};
 
 #[cfg(feature = "generate")]
 fn proto_modules(proto_dir: &Path) -> Vec<String> {
@@ -38,6 +38,12 @@ fn main() {
 		.protoc_path(&protoc_bin_path().unwrap())
 		.include("./s2client-proto/")
 		.inputs(input_files)
+		.customize(
+			Customize::default()
+				.generate_accessors(true)
+				.generate_getter(true)
+				.gen_mod_rs(false),
+		)
 		.run_from_script();
 
 	println!("protobufs were generated successfully");
